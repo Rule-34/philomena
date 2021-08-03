@@ -11,6 +11,14 @@
     &.block--fixed {
       background: var(--#{$type}-color);
     }
+
+    & a {
+      color: var(--#{$type}-link-color);
+
+      &:hover {
+        color: var(--link-hover-color);
+      }
+    }
   }
 }
 

@@ -27,6 +27,8 @@ $tag-content-fanmade-color: #622c4e;
 $tag-content-official-color: #4b491c;
 $tag-spoiler-color: #4f3811;
 
+$spoiler-color: #0f0f0f;
+
 @mixin tag-color($tagname, $color, $text-percentage: 35%, $border-percentage: 15%) {
   --tag-#{$tagname}-color: #{$color};
   --tag-#{$tagname}-border-color: #{lighten($color, $border-percentage)};
@@ -35,8 +37,9 @@ $tag-spoiler-color: #4f3811;
 
 @mixin type-color($type, $color) {
   --#{$type}-color: #{$color};
-  --#{$type}-border-color: #{lighten(desaturate($color, 5%), 35%)};
+  --#{$type}-border-color: #{lighten(desaturate($color, 5%), 30%)};
   --#{$type}-dark-color: #{darken($color, 15%)};
+  --#{$type}-link-color: #{lighten($color, 45%)};
 }
 
 :root {
@@ -61,6 +64,9 @@ $tag-spoiler-color: #4f3811;
   --fave-color: #{$fave-color};
   --comment-color: #{$comment-color};
   --hide-color: #{$hide-color};
+
+  --spoiler-color: #{$spoiler-color};
+  --spoiler-revealed-color: #{lighten($spoiler-color, 20%)};
 
   @include type-color(success, $success-color);
   @include type-color(warning, $warning-color);

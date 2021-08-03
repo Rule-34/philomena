@@ -1,0 +1,27 @@
+.communication__toolbar {
+  font-size: var(--font-size);
+  background: var(--secondary-color);
+  padding: 0 var(--padding-small);
+  line-height: var(--block-header-height);
+  border: 1px solid var(--secondary-border-color);
+  border-bottom: 0;
+  box-sizing: border-box;
+}
+
+.communication__toolbar__button {
+  color: var(--text-color);
+  background: 0;
+  border: 0;
+  padding: var(--padding-small);
+
+  &:hover {
+    background: var(--secondary-muted-color);
+  }
+}
+
+.communication__toolbar__separator {
+  width: 1px;
+  height: var(--block-header-height);
+  margin: 0 var(--padding-small);
+  background: var(--secondary-border-color);
+}
