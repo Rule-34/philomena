@@ -1,5 +1,5 @@
 .block.block__header
-  .flex.flex--wrap.image-metabar.center--layout id="image_meta_#{@image.id}"
+  .flex.flex--wrap.image-metabar.layout--centered id="image_meta_#{@image.id}"
     .stretched-mobile-links
       a.js-prev href=Routes.image_navigate_path(@conn, :index, @image, [rel: "prev"] ++ scope(@conn)) title="Previous Image (j)"
         i.fa.fa-chevron-left
@@ -50,7 +50,7 @@
       a href="#{pretty_url(@image, true, true)}" title="Download (no tags in filename)"
         i.fa.fa-download>
         | DS
-  .image-metabar.flex.flex--wrap.block__header--user-credit.center--layout#extrameta
+  .image-metabar.flex.flex--wrap.block__header--user-credit.layout--centered#extrameta
     div
       ' Uploaded
       => pretty_time(@image.created_at)

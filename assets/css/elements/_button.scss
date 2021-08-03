@@ -2,7 +2,7 @@
   .button--#{$type} {
     border-color: var(--#{$type}-border-color);
 
-    .button--important {
+    &.button--important {
       background: var(--#{$type}-color) !important;
       box-shadow: 0 -1px var(--#{$type}-dark-color) inset;
     }

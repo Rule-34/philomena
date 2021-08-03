@@ -32,3 +32,34 @@
   min-height: 100vh;
   width: 100%;
 }
+
+.layout--narrow {
+  width: 96vw;
+  max-width: var(--narrow-layout-width);
+}
+
+.layout--medium {
+  width: 96vw;
+  max-width: var(--medium-layout-width);
+}
+
+@include if-desktop {
+  .centered-layout {
+    .layout--medium, .layout--narrow {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+#container.centered-layout .layout--centered {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container.centered-layout .layout--centered-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

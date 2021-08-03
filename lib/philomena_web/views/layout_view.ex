@@ -10,7 +10,7 @@ defmodule PhilomenaWeb.LayoutView do
   end
 
   def container_class(%{use_centered_layout: false}), do: nil
-  def container_class(_user), do: "layout--center-aligned"
+  def container_class(_user), do: "centered-layout"
 
   def render_time(conn) do
     (Time.diff(Time.utc_now(), conn.assigns[:start_time], :microsecond) / 1000.0)

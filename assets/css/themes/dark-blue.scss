@@ -58,6 +58,7 @@ $spoiler-color: #0f0f0f;
   --secondary-border-color: #{lighten($secondary-color, 20%)};
   --secondary-muted-color: #{darken(desaturate($secondary-color, 5%), 10%)};
   --secondary-dark-color: #{darken($secondary-color, 15%)};
+  --secondary-link-color: #{lighten($secondary-color, 55%)};
 
   --upvote-color: #{$upvote-color};
   --downvote-color: #{$downvote-color};

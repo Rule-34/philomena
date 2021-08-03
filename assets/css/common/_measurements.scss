@@ -1,5 +1,7 @@
 $min-desktop-width: 1280px;
 $max-phone-width: 700px;
+$narrow-layout-width: 960px;
+$medium-layout-width: $min-desktop-width;
 
 $font-family-base: verdana, arial, helvetica, sans-serif;
 $font-family-monospace: "Droid Sans Mono", monospace;
@@ -40,6 +42,8 @@ $font-family-monospace: "Droid Sans Mono", monospace;
 
   --min-desktop-width: #{$min-desktop-width};
   --max-phone-width: #{$max-phone-width};
+  --medium-layout-width: #{$medium-layout-width};
+  --narrow-layout-width: #{$narrow-layout-width};
 
   --transition-animation-duration: 0.25s;
 }

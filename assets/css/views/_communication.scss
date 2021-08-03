@@ -25,3 +25,31 @@
   margin: 0 var(--padding-small);
   background: var(--secondary-border-color);
 }
+
+.communication-edit__actions {
+  display: flex;
+  flex-direction: row;
+  line-height: var(--block-header-height);
+  align-items: center;
+  border: 0;
+  margin: var(--padding-normal);
+  margin-top: 0;
+  gap: var(--padding-normal);
+}
+
+.communication__anonymous {
+  display: flex;
+  flex-direction: row;
+  line-height: ar(--block-header-height);
+  background: var(--secondary-color);
+  border: 1px solid var(--secondary-border-color);
+}
+
+.communication__anonymous--checkbox {
+  padding: 0 var(--padding-small);
+  border-right: 1px solid var(--secondary-border-color);
+}
+
+.communication__anonymous--label {
+  padding: 0 var(--padding-small);
+}

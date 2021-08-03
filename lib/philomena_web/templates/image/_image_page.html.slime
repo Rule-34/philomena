@@ -1,4 +1,4 @@
-.center--layout--flex
+.layout--centered-flex
   = if @image.thumbnails_generated do
     = render PhilomenaWeb.ImageView, "_image_target.html", image: @image, conn: @conn
   - else

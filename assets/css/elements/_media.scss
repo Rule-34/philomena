@@ -93,3 +93,7 @@
   grid-template-rows: auto;
   grid-gap: var(--padding-small);
 }
+
+.image-scaled {
+  max-width: 100%;
+}
