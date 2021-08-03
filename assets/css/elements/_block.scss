@@ -23,6 +23,10 @@
   padding: var(--padding-normal);
 }
 
+.block__content--small {
+  padding: var(--padding-small);
+}
+
 @include if-phone {
   .block__content {
     padding: var(--padding-small);
