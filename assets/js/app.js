@@ -22,3 +22,4 @@ import '../css/application.scss';
 
 // Themes.
 import '../css/themes/dark-blue.scss';
+import '../css/themes/dark-purple.scss';
