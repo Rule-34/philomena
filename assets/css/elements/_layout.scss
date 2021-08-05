@@ -1,6 +1,5 @@
 .column-layout {
-  display: flex;
-  flex-direction: row;
+  @extend .flex__row;
   width: 100%;
 }
 
@@ -24,9 +23,8 @@
 }
 
 #container {
+  @extend .flex__column;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
   height: 100%;
   margin: auto;
   min-height: 100vh;

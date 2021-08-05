@@ -1,6 +1,5 @@
 .statistics {
-  display: flex;
-  flex-direction: column;
+  @extend .flex__column;
   border: 1px solid var(--secondary-color);
 }
 

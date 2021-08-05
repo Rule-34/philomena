@@ -2,6 +2,28 @@
   display: flex;
 }
 
+.flex__row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex__column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex__row--centered {
+  @extend .flex__row;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex__column--centered {
+  @extend .flex__column;
+  align-items: center;
+  justify-content: center;
+}
+
 .flex--centered {
   align-items: center;
 }

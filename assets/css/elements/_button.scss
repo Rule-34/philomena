@@ -22,7 +22,6 @@
   font-size: var(--padding-normal);
   padding: var(--padding-small);
   border: 1px solid var(--primary-border-color);
-  border-radius: var(--border-radius);
   box-sizing: border-box;
 
   &:hover {
@@ -37,8 +36,7 @@
 }
 
 .button__row {
-  display: flex;
-  flex-direction: row;
+  @extend .flex__row;
 
   & > button {
     margin-right: var(--padding-small);

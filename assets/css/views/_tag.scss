@@ -19,8 +19,7 @@
 }
 
 .tag-list {
-  display: flex;
-  flex-direction: row;
+  @extend .flex__row;
   flex-wrap: wrap;
   margin-bottom: var(--padding-normal);
 }

@@ -1,7 +1,5 @@
 .image-constrained {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend .flex__row--centered;
 }
 
 .media-list {
@@ -71,10 +69,7 @@
 }
 
 .image-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column;
+  @extend .flex__column--centered;
 }
 
 .image-container a {

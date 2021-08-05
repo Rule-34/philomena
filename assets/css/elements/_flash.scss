@@ -37,6 +37,7 @@
 }
 
 .flash__icon {
+  @extend .flex__column--centered;
   padding: var(--padding-normal);
 }
 
