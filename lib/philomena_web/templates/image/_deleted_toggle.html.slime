@@ -1,5 +1,7 @@
 - del = @conn.params["del"]
 
+.separator--vertical.separator--secondary
+
 = if blank?(del) do
   a.js-staff-action href=@route.(Keyword.put(@params, :del, 1)) title="Include Deleted/Merged Images"
     i.fa.fa-plus

@@ -19,13 +19,6 @@
   }
 }
 
-.communication__toolbar__separator {
-  width: 1px;
-  height: var(--block-header-height);
-  margin: 0 var(--padding-small);
-  background: var(--secondary-border-color);
-}
-
 .communication-edit__actions {
   @extend .flex__row;
   line-height: var(--block-header-height);

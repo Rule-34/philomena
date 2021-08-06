@@ -1,0 +1,16 @@
+.pagination span {
+  &:first-child {
+    padding-left: 0;
+  }
+
+  padding: 0 var(--padding-small);
+}
+
+.pagination a {
+  &:first-child {
+    padding-left: 0;
+  }
+
+  padding: 0 var(--padding-small);
+  font-weight: bold;
+}

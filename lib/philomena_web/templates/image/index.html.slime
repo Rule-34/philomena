@@ -10,17 +10,21 @@ elixir:
   info = render PhilomenaWeb.PaginationView, "_pagination_info.html", page: @images
 
 .block#imagelist-container
-  section.block__header.page__header.flex
-    span.block__header__title.page__title.hidden--mobile
+  = if header != "" do
+    .block__header.page__header
       => header
 
-    .page__pagination = pagination
+  .block__content.flex__row.flex--spaced-out 
+    .button__group--standalone
+      .page__pagination = pagination
 
-    .flex__right.page__info
-      = random_button @conn, params
-      = hidden_toggle @conn, route, params
-      = deleted_toggle @conn, route, params
-      = quick_tag @conn
+    .flex__row
+      .button__group--standalone
+        = random_button @conn, params
+        = hidden_toggle @conn, route, params
+        = deleted_toggle @conn, route, params
+      .button__group--standalone
+        = quick_tag @conn
 
   = info_row @conn, tags
 
@@ -33,7 +37,7 @@ elixir:
         - image ->
           = render PhilomenaWeb.ImageView, "_image_box.html", image: image, link: image_url.(image), size: assigns[:size] || :thumb, conn: @conn
 
-  .block__header.block__header--light.page__header.flex
+  .block__footer
     .page__pagination = pagination
 
     span.block__header__title.page__info

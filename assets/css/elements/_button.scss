@@ -43,6 +43,50 @@
   }
 }
 
+.button__group {
+  @extend .flex__row;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  margin-right: var(--padding-normal);
+  background: var(--secondary-dark-color);
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.button__group .button {
+  border: 0;
+  border-right: var(--secondary-color);
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.button__group--single {
+  @extend .button__group;
+  margin-right: 0;
+}
+
+.button__group--standalone {
+  @extend .button__group;
+  padding: var(--padding-small);
+}
+
+.button__group--standalone a {
+  font-weight: bold;
+  padding: 0 var(--padding-small);
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
 @include button-type(success);
 @include button-type(warning);
 @include button-type(danger);
