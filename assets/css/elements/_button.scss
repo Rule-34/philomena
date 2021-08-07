@@ -11,9 +11,25 @@
       background: var(--#{$type}-dark-color) !important;
     }
   }
+
+  .button__group--#{$type} {
+    border-color: var(--#{$type}-color);
+    background: var(--#{$type}-dark-color);
+
+    & a {
+      color: var(--#{$type}-border-color);
+
+      &:hover {
+        @include animated-transition;
+        color: var(--text-color);
+        background: var(--#{$type}-color);
+      }
+    }
+  }
 }
 
 .button {
+  @include animated-transition;
   display: block;
   width: fit-content;
   font-weight: bold;
@@ -25,8 +41,8 @@
   box-sizing: border-box;
 
   &:hover {
+    @include animated-transition;
     background: var(--primary-dark-color);
-    transition: background var(--transition-animation-duration) ease;
   }
 }
 
@@ -49,10 +65,19 @@
   border-radius: var(--border-radius);
   margin-right: var(--padding-normal);
   background: var(--secondary-dark-color);
+  line-height: var(--button-group-height);
 
   &:last-child {
     margin: 0;
   }
+}
+
+.button__group--tall {
+  line-height: var(--button-group-tall-height)
+}
+
+.button__group--small {
+  line-height: var(--button-group-small-height)
 }
 
 .button__group .button {
@@ -71,19 +96,16 @@
 
 .button__group--standalone {
   @extend .button__group;
-  padding: var(--padding-small);
 }
 
 .button__group--standalone a {
+  @include animated-transition;
   font-weight: bold;
   padding: 0 var(--padding-small);
 
-  &:first-child {
-    padding-left: 0;
-  }
-
-  &:last-child {
-    padding-right: 0;
+  &:hover {
+    @include animated-transition;
+    background: var(--secondary-muted-color);
   }
 }
 

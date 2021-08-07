@@ -1,16 +1,14 @@
-.pagination span {
-  &:first-child {
-    padding-left: 0;
-  }
+.pagination {
+  display: flex;
+  flex-direction: row;
+  line-height: inherit;
+}
 
+.pagination span {
   padding: 0 var(--padding-small);
 }
 
 .pagination a {
-  &:first-child {
-    padding-left: 0;
-  }
-
   padding: 0 var(--padding-small);
   font-weight: bold;
 }

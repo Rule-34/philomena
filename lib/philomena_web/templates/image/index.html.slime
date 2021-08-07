@@ -9,14 +9,17 @@ elixir:
   pagination = render PhilomenaWeb.PaginationView, "_pagination.html", page: @images, route: route, params: params
   info = render PhilomenaWeb.PaginationView, "_pagination_info.html", page: @images
 
-.block#imagelist-container
+.block.block--borderless#imagelist-container
   = if header != "" do
     .block__header.page__header
       => header
 
-  .block__content.flex__row.flex--spaced-out 
-    .button__group--standalone
-      .page__pagination = pagination
+  .block__content.flex__row.flex--spaced-out
+    = if @images.total_pages > 1 do
+      .button__group--standalone
+        .page__pagination = pagination
+    - else
+      div
 
     .flex__row
       .button__group--standalone

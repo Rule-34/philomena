@@ -1,7 +1,7 @@
 - params = assigns[:params] || []
 
 = if @page.total_pages > 1 do
-  nav.pagination.hidden--mobile
+  .pagination.hidden--mobile
     = if not first_page?(@page) do
       = link to: first_page_path(@page, @route, params) do
         i.fa.fa-backward>

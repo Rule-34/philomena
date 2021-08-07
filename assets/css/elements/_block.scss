@@ -12,6 +12,10 @@
       background: var(--#{$type}-color);
     }
 
+    &.block--muted {
+      border-color: var(--#{$type}-color);
+    }
+
     &.block--fixed {
       background: var(--#{$type}-color);
     }
@@ -29,6 +33,14 @@
 .block {
   border: 1px solid var(--primary-border-color);
   margin-bottom: var(--padding-small);
+}
+
+.block--muted {
+  border-color: var(--primary-color);
+}
+
+.block--borderless {
+  border: 0;
 }
 
 .block__content {

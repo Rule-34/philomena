@@ -92,3 +92,8 @@
 .image-scaled {
   max-width: 100%;
 }
+
+.media-tiny-container {
+  width: var(--media-tiny-container-width);
+  height: var(--media-tiny-container-width);
+}

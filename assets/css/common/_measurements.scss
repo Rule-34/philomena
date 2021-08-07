@@ -18,12 +18,20 @@ $font-family-monospace: "Droid Sans Mono", monospace;
   --navbar-secondary-size: 36px;
   --navbar-avatar-size: 36px;
 
+  --button-group-height: 2em;
+  --button-group-tall-height: 2.5em;
+  --button-group-small-height: 1.5em;
+
   --column-left-width: 326px;
 
   --border-radius: 4px;
 
   --media-container-width: 225px;
+  --media-tiny-container-width: 50px;
   --media-small-container-width: 125px;
+  --media-medium-container-width: 250px;
+  --media-large-container-width: 500px;
+  --media-full-container-width: 100%;
   --media-featured-width: 320px;
   --media-header-height: 24px;
 
@@ -31,6 +39,7 @@ $font-family-monospace: "Droid Sans Mono", monospace;
   --font-family-monospace: #{$font-family-monospace};
 
   --font-size: 14px;
+  --font-tiny-size: 12px;
   --font-header-size: 16px;
   --font-h1-size: 1.5em;
   --font-h2-size: 1.35em;

@@ -80,3 +80,9 @@
     background-color: var(--primary-dark-color);
   }
 }
+
+.tag-info__image {
+  border: 1px solid var(--secondary-color);
+  font-size: var(--font-tiny-size);
+  text-align: center;
+}

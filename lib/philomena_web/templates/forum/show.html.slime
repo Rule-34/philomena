@@ -13,7 +13,7 @@ h1 = @forum.name
     a href=Routes.post_path(@conn, :index, pq: "forum:#{@forum.short_name}")
       i.fa.fa-fw.fa-search>
       ' Search Posts
-    span.spacing-left
+    span.spacing--left
       => @forum.topic_count
       ' topics
   .block__header--sub.block__header--light.page__header

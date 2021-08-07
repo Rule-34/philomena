@@ -67,3 +67,23 @@
   align-items: center;
   justify-content: center;
 }
+
+.spacing {
+  margin: var(--padding-normal);
+}
+
+.spacing--right {
+  margin-right: var(--padding-normal);
+}
+
+.spacing--left {
+  margin-left: var(--padding-normal);
+}
+
+.spacing--top {
+  margin-top: var(--padding-normal);
+}
+
+.spacing--bottom {
+  margin-bottom: var(--padding-normal);
+}

@@ -56,7 +56,7 @@ elixir:
         = pretty_time(@gallery.updated_at)
 
     .block__content.flex.js-imagelist-info
-      .flex__fixed.thumb-tiny-container.spacing-right
+      .flex__fixed.media-tiny-container.spacing--right
         = render PhilomenaWeb.ImageView, "_image_container.html", image: @gallery.thumbnail, size: :thumb_tiny, conn: @conn
 
       .flex__grow
