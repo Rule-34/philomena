@@ -12,7 +12,7 @@ header.header
         i.fa.fa-upload
 
     = form_for @conn, Routes.search_path(@conn, :index), [method: "get", class: "header__search flex flex--no-wrap flex--centered", enforce_utf8: false], fn f ->
-      input.input.header__input.header__input--search#q name="q" title="For terms all required, separate with ',' or 'AND'; also supports 'OR' for optional terms and '-' or 'NOT' for negation. Search with a blank query for more options or click the ? for syntax help." value=@conn.params["q"] placeholder="Search" autocapitalize="none"
+      input.input.input--text.header__input.header__input--search#q name="q" title="For terms all required, separate with ',' or 'AND'; also supports 'OR' for optional terms and '-' or 'NOT' for negation. Search with a blank query for more options or click the ? for syntax help." value=@conn.params["q"] placeholder="Search" autocapitalize="none"
 
       = if present?(@conn.params["sf"]) do
         input type="hidden" name="sf" value=@conn.params["sf"]
@@ -22,12 +22,13 @@ header.header
       = if hides_images?(@conn) do
         = select f, :del, [{"-D", ""}, {"+D", 1}, {"*D", "deleted"}, {"DO", "only"}], name: "del", class: "input header__input js-staff-action", autocomplete: "off"
 
-      button.header__search__button type="submit" title="Search"
-        i.fa-embedded--search
-      a.header__search__button href="/search/reverse" title="Search using an image"
-        i.fa-embedded--camera
-      a.header__search__button href="/pages/search_syntax" title="Search syntax help"
-        i.fa-embedded--help
+      .button__group--standalone.header__buttons
+        button.button.header__search__button type="submit" title="Search"
+          i.fa.fa-search
+        a.button.header__search__button href="/search/reverse" title="Search using an image"
+          i.fa.fa-camera
+        a.button.header__search__button href="/pages/search_syntax" title="Search syntax help"
+          i.fa.fa-question
 
     .header__link.header__link--no-hover.header__spacer
 

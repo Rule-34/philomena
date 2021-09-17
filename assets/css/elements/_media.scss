@@ -39,6 +39,7 @@
   line-height: var(--media-header-height);
   padding: 0 var(--padding-small);
   justify-content: center;
+  font-size: var(--font-tiny-size);
 }
 
 .media-box__header--link-row {
@@ -75,6 +76,13 @@
 .image-container a {
   display: flex;
   max-height: 100%;
+
+  // For some reason tall images don't center properly within the container
+  // without this hack. I blame CSS.
+  & > img {
+    max-height: 100%;
+    margin: auto;
+  }
 }
 
 .media-box__image {
@@ -96,4 +104,9 @@
 .media-tiny-container {
   width: var(--media-tiny-container-width);
   height: var(--media-tiny-container-width);
+}
+
+.thumb_tiny {
+  max-width: var(--media-tiny-container-width);
+  max-height: var(--media-tiny-container-width);
 }

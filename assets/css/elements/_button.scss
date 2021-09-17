@@ -43,6 +43,7 @@
   &:hover {
     @include animated-transition;
     background: var(--primary-dark-color);
+    cursor: pointer;
   }
 }
 

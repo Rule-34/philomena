@@ -6,6 +6,10 @@
   box-sizing: border-box;
   font-family: var(--font-family-monospace);
 
+  &:focus {
+    outline: none;
+  }
+
   &::placeholder {
     color: var(--secondary-border-color);
   }
@@ -18,4 +22,5 @@
 .input--text {
   height: var(--input-text-height);
   padding: var(--padding-normal) var(--padding-small);
+  cursor: text;
 }

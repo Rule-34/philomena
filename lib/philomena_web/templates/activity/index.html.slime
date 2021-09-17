@@ -17,7 +17,7 @@
           ' Trending Images
         .block__content--small.media-grid
           = for image <- @top_scoring do
-            = render PhilomenaWeb.ImageView, "_image_box.html", image: image, size: :thumb_small, conn: @conn
+            = render PhilomenaWeb.ImageView, "_image_box.html", image: image, size: :thumb, conn: @conn
         a.block__footer--small.center href="/search?q=*&amp;sf=score&amp;sd=desc"
           ' All Time Top Scoring
       .block.hidden--mobile
