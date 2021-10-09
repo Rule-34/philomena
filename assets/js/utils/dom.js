@@ -27,11 +27,25 @@ function toggleEl(...elements) {
 }
 
 function clearEl(...elements) {
-  [].concat(...elements).forEach(el => { while (el.firstChild) el.removeChild(el.firstChild); });
+  [].concat(...elements).forEach(el => {
+    while (el.firstChild) el.removeChild(el.firstChild);
+  });
 }
 
 function removeEl(...elements) {
   [].concat(...elements).forEach(el => el.parentNode.removeChild(el));
+}
+
+function disableEl(...elements) {
+  [].concat(...elements).forEach(el => {
+    el.disabled = true;
+  });
+}
+
+function enableEl(...elements) {
+  [].concat(...elements).forEach(el => {
+    el.disabled = false;
+  });
 }
 
 function makeEl(tag, attr = {}) {
@@ -71,4 +85,21 @@ function findFirstTextNode(of) {
   return Array.prototype.filter.call(of.childNodes, el => el.nodeType === Node.TEXT_NODE)[0];
 }
 
-export { $, $$, showEl, hideEl, toggleEl, clearEl, removeEl, makeEl, insertBefore, onLeftClick, whenReady, escapeHtml, escapeCss, findFirstTextNode };
+export {
+  $,
+  $$,
+  showEl,
+  hideEl,
+  toggleEl,
+  clearEl,
+  removeEl,
+  makeEl,
+  disableEl,
+  enableEl,
+  insertBefore,
+  onLeftClick,
+  whenReady,
+  escapeHtml,
+  escapeCss,
+  findFirstTextNode
+};
