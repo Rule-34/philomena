@@ -44,7 +44,8 @@ json_config =
     avatar: "avatar.json",
     footer: "footer.json",
     quick_tag_table: "quick_tag_table.json",
-    tag: "tag.json"
+    tag: "tag.json",
+    settings: "settings.json"
   }
   |> Map.new(fn {name, file} ->
     {name, Jason.decode!(File.read!("#{app_dir}/config/#{file}"))}

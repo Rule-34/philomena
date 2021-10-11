@@ -1,4 +1,6 @@
 defmodule PhilomenaWeb.AppView do
+  alias Philomena.Config
+
   use Phoenix.HTML
 
   @time_strings %{
@@ -173,4 +175,8 @@ defmodule PhilomenaWeb.AppView do
   def blank?(_object), do: false
 
   def present?(object), do: not blank?(object)
+
+  def setting(key) do
+    Config.get_setting(key)
+  end
 end

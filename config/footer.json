@@ -29,10 +29,6 @@
       "url": "/pages/spoilers"
     },
     {
-      "title": "Takedown Requests",
-      "url": "/pages/takedowns"
-    },
-    {
       "title": "Do-Not-Post List",
       "url": "/dnp"
     }
@@ -40,14 +36,9 @@
   "Help & Information": [
     {
       "title": "Changelog",
-      "url": "https://github.com/derpibooru/philomena/commits/master",
+      "url": "https://github.com/philomena-dev/philomena/commits/master",
       "bold": true,
       "target": "_blank"
-    },
-    {
-      "title": "FAQs",
-      "url": "/pages/faq",
-      "bold": true
     },
     {
       "title": "API Docs",
@@ -60,18 +51,9 @@
     {
       "title": "Advertising",
       "url": "/pages/advertising"
-    },
-    {
-      "title": "Onion Service",
-      "url": "/pages/onion"
     }
   ],
   "Community": [
-    {
-      "title": "Contact",
-      "url": "/pages/contact",
-      "bold": true
-    },
     {
       "title": "Donations",
       "url": "/pages/donations",
@@ -91,7 +73,7 @@
     },
     {
       "title": "Twitter",
-      "url": "https://twitter.com/Derpibooru",
+      "url": "https://twitter.com",
       "target": "_blank"
     }
   ]
