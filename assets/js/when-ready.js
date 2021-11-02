@@ -7,6 +7,7 @@ import { whenReady }            from './utils/dom';
 import { showOwnedComments }    from './communications/comment';
 import { showOwnedPosts }       from './communications/post';
 
+import { listenAssociations }   from './associations';
 import { listenAutocomplete }   from './autocomplete';
 import { loadBooruData }        from './booru';
 import { registerEvents }       from './boorujs';
@@ -40,6 +41,7 @@ whenReady(() => {
   showOwnedComments();
   showOwnedPosts();
   loadBooruData();
+  listenAssociations();
   listenAutocomplete();
   registerEvents();
   setupBurgerMenu();
