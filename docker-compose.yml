@@ -10,13 +10,26 @@ services:
       dockerfile: ./docker/app/Dockerfile
     environment:
       - MIX_ENV=dev
+
+      - SITE_DOMAINS=localhost
+      - CDN_HOST=localhost
+
+      - DATABASE_URL=ecto://postgres:postgres@postgres/philomena_dev
       - PGPASSWORD=postgres
+      - REDIS_HOST=redis
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+
       - ANONYMOUS_NAME_SALT=2fmJRo0OgMFe65kyAJBxPT0QtkVes/jnKDdtP21fexsRqiw8TlSY7yO+uFyMZycp
+      - PASSWORD_PEPPER=dn2e0EpZrvBLoxUM3gfQveBhjf0bG/6/bYhrOyq3L3hV9hdo/bimJ+irbDWsuXLP
+
+      - MAILER_ADDRESS=noreply@philomena.local
+
       - HCAPTCHA_SECRET_KEY=0x0000000000000000000000000000000000000000
       - HCAPTCHA_SITE_KEY=10000000-ffff-ffff-ffff-000000000001
-      - PASSWORD_PEPPER=dn2e0EpZrvBLoxUM3gfQveBhjf0bG/6/bYhrOyq3L3hV9hdo/bimJ+irbDWsuXLP
-      - TUMBLR_API_KEY=fuiKNFp9vQFvjLNvx4sUwti4Yb5yGutBN4Xh10LXZhhRKjWlV4
+
       - OTP_SECRET_KEY=Wn7O/8DD+qxL0X4X7bvT90wOkVGcA90bIHww4twR03Ci//zq7PnMw8ypqyyT/b/C
+      - TUMBLR_API_KEY=fuiKNFp9vQFvjLNvx4sUwti4Yb5yGutBN4Xh10LXZhhRKjWlV4
+
       - ADVERT_FILE_ROOT=priv/static/system/images/adverts
       - AVATAR_FILE_ROOT=priv/static/system/images/avatars
       - BADGE_FILE_ROOT=priv/static/system/images
@@ -28,13 +41,8 @@ services:
       - IMAGE_URL_ROOT=/img
       - BADGE_URL_ROOT=/media
       - TAG_URL_ROOT=/media
-      - ELASTICSEARCH_URL=http://elasticsearch:9200
-      - REDIS_HOST=redis
-      - DATABASE_URL=ecto://postgres:postgres@postgres/philomena_dev
-      - CDN_HOST=localhost
-      - MAILER_ADDRESS=noreply@philomena.local
+
       - START_ENDPOINT=true
-      - SITE_DOMAINS=localhost
     working_dir: /srv/philomena
     tty: true
     volumes:
