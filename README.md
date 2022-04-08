@@ -51,3 +51,24 @@ And if everything goes wrong:
     git push -f production master
 
 (to be repeated until it works again)
+
+
+## API
+
+### Uploading images
+
+Make the following HTTP request:
+
+```
+POST http://localhost:8080/api/v1/json/images?key={API_KEY}
+Content-Type: application/json
+
+{
+  "image": {
+    "description": "Test",
+    "tag_input": "safe, derpy hooves, pegasus, pony, adventure in the comments, bag, building, chair, cigar, derpibooru legacy, eyes, featured image, female, grin, gritted teeth, hilarious in hindsight, image macro, it begins, j. jonah jameson, letter, mail, male, mare, meme, muffin, necktie, paper, parody, phone, ponified, sitting, smiling, smoking, song in the comments, spider-man, stallion, swinging",
+    "source_url": "https://picsum.photos/200"
+  },
+  "url": "https://picsum.photos/200"
+}
+```
